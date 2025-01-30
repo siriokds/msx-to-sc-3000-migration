@@ -9,3 +9,6 @@ MSX Keyboard Matrix
 | Y0 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0
 | Y1 | ; | [ | @ | ° | ^ | - | 9 | 8
 | Y2 | B | A | * | / | . | , | ] | :
+| Y3 | J | I | H | G | F | E | D | C
+| Y4 | R | Q | P | O | N | M | L | K
+| Y5 | Z | Y | X | W | V | U | T | S
