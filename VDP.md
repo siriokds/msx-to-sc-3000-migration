@@ -9,7 +9,7 @@ VDP CPU I/O timings:
 | Active display area | Text | 2 us | 0 - 1.1 us | 2 - 3.1 us
 | Active display area | Graphics I/II | 2 us | 0 - 5.95 us | 2 - 8 us
 | Active display area | Multicolor | 2 us | 0 - 1.5 us | 2 - 3.5 us
-| 4300 us after <br>Vertical Interrupt Signal | All | 2 us | 0 us | 2 us
+| 4300 us after (16 T-States) <br>Vertical Interrupt Signal | All | 2 us | 0 us | 2 us
 | Register 1 Blank Bit 0 | All | 2 us | 0 us | 2 us
 <br>
 <br>
