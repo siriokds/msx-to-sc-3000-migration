@@ -1,5 +1,6 @@
 
 
+
 # msx-to-sc-3000-migration
 
 VDP CPU I/O timings:
@@ -17,6 +18,8 @@ VDP main routines:
 
 |  | MSX 1 | SC-3000 / SG-1000
 |:---:|:---:|:---:|
+|out (vdp_data), a| 12 T-States | 11 T-States 
+|ld c,0x98<br>out ( c ), a | 14 T-States | 12 T-States 
 |Fast Writes <br>(2 us minimum<br> vblank + unrolled)|outi ; (18 T / 5.028 us)<br>outi ; (18 T / 5.028 us)<br>outi ; (18 T / 5.028 us)<br>...|outi ; (16 T / 4.470 us)<br>outi ; (16 T / 4.470 us)<br>outi ; (16 T / 4.470 us)<br>...|
 |Slow Writes <br> (29 T-States minimum)|.label:<br>outi ; (18 T)<br>jp nz, .label ; (11 T)|.label:<br>nop ;(4 T)<br>outi ; (16 T)<br>jp nz, .label ; (10 T)
 ||Total: 29 T-States|Total: 30 T-States
