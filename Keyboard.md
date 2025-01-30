@@ -16,6 +16,9 @@ MSX Keyboard Matrix (bios function "snsmat")
 | Y7 | return | select | bs | stop | tab| esc| F5| F4 
 | Y8 | cursor<br>right | cursor<br>down | cursor<br>up | cursor<br>left | del| ins| home | space 
 
+<br>
+<br>
+
 
 SC-3000 (and SK-1100 external) Keyboard Matrix
 |  | PB 3 | PB 2 | PB 1 | PB 0 | PA 7 | PA 6 | PA 5 | PA 4 | PA 3 | PA 2 | PA 1 | PA 0
