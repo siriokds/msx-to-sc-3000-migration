@@ -4,13 +4,13 @@
 
 VDP CPU I/O timings:
 
-| Condition | Mode | VDP Delay | Time waiting <br> for an access window | Total time | Total T-States<br>@ 3.58 Mhz
-| :---: | :---: | :---: | :---: | :---: | :---:
-| Active display area | Text | 2 us | 0 - 1.1 us | 2 - 3.1 us | 12
-| Active display area | Graphics I/II | 2 us | 0 - 5.95 us | 2 - 8 us | 29
-| Active display area | Multicolor | 2 us | 0 - 1.5 us | 2 - 3.5 us | 13
-| 4300 us after (16 T-States) <br>Vertical Interrupt Signal | All | 2 us | 0 us | 2 us | 8
-| Register 1 Blank Bit 0 | All | 2 us | 0 us | 2 us | 8
+| Condition | Mode | Sprites<br>enabled |VDP Delay | Time waiting <br> for an access window | Total time | Total T-States<br>@ 3.58 Mhz
+| :---: | :---: | :---: | :---: | :---: | :---: | :---:
+| Active display area | Text | No |2 us | 0 - 1.1 us | 2 - 3.1 us | 12
+| Active display area | Graphics I/II | Yes |2 us | 0 - 5.95 us | 2 - 8 us | 29
+| Active display area | Multicolor | Yes |2 us | 0 - 1.5 us | 2 - 3.5 us | 13
+| 4300 us after (16 T-States) <br>Vertical Interrupt Signal | All | | 2 us | 0 us | 2 us | 8
+| Register 1 Blank Bit 0 | All | | 2 us | 0 us | 2 us | 8
 <br>
 <br>
 VDP main routines:
