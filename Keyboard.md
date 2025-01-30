@@ -12,3 +12,6 @@ MSX Keyboard Matrix
 | Y3 | J | I | H | G | F | E | D | C
 | Y4 | R | Q | P | O | N | M | L | K
 | Y5 | Z | Y | X | W | V | U | T | S
+| Y6 | F3 | F2 | F1 | kana | cap | graph | ctrl | shift
+| Y7 | return | select | bs | stop | tab| esc| F5| F4 
+| Y8 | cursor<br>right | cursor<br>down | cursor<br>up | cursor<br>left | del| ins| home | space 
