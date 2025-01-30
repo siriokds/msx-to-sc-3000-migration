@@ -25,7 +25,7 @@ SC-3000 (and SK-1100 external) Keyboard Matrix
 | Y2 |  |  |  | 0 | P | ; | / | home<br>clr| C | D | E | 3
 | Y3 |  |  |  | - | @ | : | pi | ins/del| V | F | R | 4
 | Y4 |  |  |  | ^ | [ | ] | cursor<br>down | | B | G | T | 5
-| Y5 | func |  |  | yen |  | Carriage<br>Return | cursor<br>left | | N | H | Y | 6
+| Y5 | func |  |  | yen |  | carriage<br>return | cursor<br>left | | N | H | Y | 6
 | Y6 | shift | ctrl | graph | break |  | cursor<br>up | cursor<br>right | | M | J | U | 7
 | Y7 | joy 2<br>fire 2 | joy 2<br>fire 1 | joy 2<br>right | joy 2<br>left | joy 2<br>down | joy 2<br>up | joy 1<br>fire 2| joy 1<br>fire 1 | joy 1<br>right | joy 1<br>left | joy 1<br>down | joy 1<br>up
 
