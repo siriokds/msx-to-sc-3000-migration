@@ -11,3 +11,5 @@ A bunch of docs about cross programming between MSX and SC-3000/SG-1000
 |VDP|TMS9918/29|TMS9918/29|TMS9918/29|
 |PSG|AY-3-8910|SN76489 (same as Colecovision)|SN76489 (same as Colecovision)|
 |Keyboard|Yes|Yes|Optional|
+|BIOS|Yes 16KB|None|None|
+|Internal Mapper|Yes (Page, opt. SubPage)|External on cartridge|External on cartridge|
