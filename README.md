@@ -11,6 +11,6 @@ A bunch of docs about cross programming between MSX and SC-3000/SG-1000
 |RAM|8 to 64KB|2KB expandable with cartridge|1KB expandable with cartridge|
 |[VDP](VDP.md) |TMS9918 (NTSC)<br> / TMS9929 (PAL)|TMS9918 (NTSC)<br> / TMS9929 (PAL)|TMS9918 (NTSC)|
 |PSG|AY-3-8910|SN76489 <br>(same as Colecovision)|SN76489 <br>(same as Colecovision)|
-|Keyboard|Yes|Yes|Optional|
+|[Keyboard](Keyboard.md)|Yes|Yes|Optional|
 |BIOS|Yes 16KB|None|None|
 |Internal Mapper|Yes (Page, opt. SubPage) + External on cartridge|External on cartridge|External on cartridge|
