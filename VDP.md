@@ -21,14 +21,14 @@ VDP main routines:
 |out (vdp_data_port), a| 12 T-States | 11 T-States 
 |ld c, vdp_data_port<br>out ( c ), a | 14 T-States | 12 T-States 
 |Fast Writes <br>(2 us minimum<br> vblank + unrolled)|outi ; (18 T / 5.028 us)<br>outi ; (18 T / 5.028 us)<br>outi ; (18 T / 5.028 us)<br>...|outi ; (16 T / 4.470 us)<br>outi ; (16 T / 4.470 us)<br>outi ; (16 T / 4.470 us)<br>...|
-|Slow Writes <br> (29 T-States minimum)|.label:<br>outi ; (18 T)<br>jp nz, .label ; (11 T)|.label:<br>nop ;(4 T)<br>outi ; (16 T)<br>jp nz, .label ; (10 T)
-||Total: 29 T-States|Total: 30 T-States
+|Slow Writes <br> (29 T-States minimum)|Copy256:<br><br>ld b, 0<br><br>.loop_256:<br>outi ; (18 T)<br>jp nz, .loop_256 ; (11 T)|Copy256:<br>ld b, 0<br><br>.loop_128_1:<br>outi ; (16 T)<br>djnz .loop_128_1 ; (13 T)<br><br>.loop_128_2:<br>outi ; (16 T)<br>djnz .loop_128_2 ; (13 T)
+||Total: 29 T-States|Total: 29 T-States
 <br>
 <br>
 VDP bytes transfer:
 
 |  | MSX 1 | SC-3000 / SG-1000
 |:---:|:---:|:---:|
-|RENDER AREA (PAL/NTSC)<br> (192 lines)| 1509 bytes | 1006 bytes
+|RENDER AREA (PAL/NTSC)<br> (192 lines)| 1509 bytes | 1509 bytes
 |NTSC VBLANK (70 lines)| 886 bytes | 997 bytes
 |PAL VBLANK (121 lines)| 1532 bytes | 1724 bytes
