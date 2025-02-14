@@ -22,7 +22,7 @@ VDP main routines:
 |ld c, vdp_data_port<br>out ( c ), a | 14 T-States | 12 T-States 
 |Fast Writes <br>(2 us minimum<br> vblank + unrolled)|outi ; (18 T / 5.028 us)<br>outi ; (18 T / 5.028 us)<br>outi ; (18 T / 5.028 us)<br>...|outi ; (16 T / 4.470 us)<br>outi ; (16 T / 4.470 us)<br>outi ; (16 T / 4.470 us)<br>...|
 |Slow Writes <br> (29 T-States minimum)|Copy256:<br><br>ld b, 0<br><br>.loop_256:<br>outi ; (18 T)<br>jp nz, .loop_256 ; (11 T)|Copy256:<br>ld b, 0<br><br>.loop_128_1:<br>outi ; (16 T)<br>djnz .loop_128_1 ; (13 T)<br><br>.loop_128_2:<br>outi ; (16 T)<br>djnz .loop_128_2 ; (13 T)
-||Total: 29 T-States|Total: 29 T-States
+||Total: 29 T-States / byte|Total: 29 T-States / byte
 <br>
 <br>
 VDP bytes transfer:
