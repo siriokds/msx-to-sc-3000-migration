@@ -1,6 +1,7 @@
 
 
 
+
 # msx-to-sc-3000-migration
 
 VDP CPU I/O timings:
@@ -22,6 +23,8 @@ VDP main routines:
 |ld c, vdp_data_port<br>out ( c ), a | 14 T-States | 12 T-States 
 |Fast Copy <br>(2 us minimum<br> vblank + unrolled)|outi ; (18 T / 5.028 us)<br>outi ; (18 T / 5.028 us)<br>outi ; (18 T / 5.028 us)<br>...|outi ; (16 T / 4.470 us)<br>outi ; (16 T / 4.470 us)<br>outi ; (16 T / 4.470 us)<br>...|
 |Slow Copy <br> (29 T-States minimum)|Copy256:<br><br>ld b, 0<br><br>.loop_256:<br>outi ; (18 T)<br>jp nz, .loop_256 ; (11 T)|Copy256:<br>ld b, 0<br><br>.loop_128_1:<br>outi ; (16 T)<br>djnz .loop_128_1 ; (13 T)<br><br>.loop_128_2:<br>outi ; (16 T)<br>djnz .loop_128_2 ; (13 T)
+||Total: 29 T-States / byte|Total: 29 T-States / byte
+|Slow Copy 32<br> (29 T-States minimum)|Copy32:<br><br>ld b, 32<br><br>.loop_32:<br>outi ; (18 T)<br>jp nz, .loop_32 ; (11 T)|Copy32:<br><br>ld b, 64<br><br>.loop_32:<br>outi ; (16 T - decr B)<br>djnz .loop_32 ; (13 T - decr B)<br><br>
 ||Total: 29 T-States / byte|Total: 29 T-States / byte
 |Slow Fill <br> (29 T-States minimum)|Fill256:<br><br>ld b, 0<br><br>.loop_256:<br>out (0x98), a		; (12 T)<br>dec b; (5 T)<br>jr nz,.loop_256 ; (13 T)|Fill256:<br><br>ld b, 0<br><br>.loop_256:<br>out (0xBE), a		; 11 T<br>dec b ; (4 T)<br>nop ; (4 T)<br>jp nz, .loop256 ; (10 T)
 ||Total: 30 T-States / byte|Total: 29 T-States / byte<br>
